@@ -1,6 +1,7 @@
 ﻿import Ejercicios.Act2.HealCharacter
 import Ejercicios.Act3.MultiAtack
 import Ejercicios.Act4.Teasure
+import Ejercicios.Act5.LevelCharacter
 import Ejercicios.Consola
 
 fun main() {
@@ -25,11 +26,11 @@ fun main() {
                 Teasure().GetGold(consola)
             }
             "5" -> {
+                LevelCharacter().ShowLevel(consola,19)
+            }
+            "8" -> {
 
             }
-            "6" -> {}
-            "7" -> {}
-            "8" -> {}
             "9" -> {}
             "10" -> {}
             "11" -> {}

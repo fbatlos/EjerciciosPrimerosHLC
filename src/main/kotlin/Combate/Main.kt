@@ -1,26 +1,36 @@
 package org.example.Combate
 
 fun main() {
-    val character1 = Character(100, 10)
+    val character1 = Character(100, 30)
     val character2 = Character(100, 20)
+    val character3 = Character(500, 10)
 
     var winner = ""
 
-    while (!character2.IsDead() && !character1.IsDead()){
+    var round = 1
 
-        character2.ReduceHeal(character1.Atack())
+    while (!character2.IsDead() && !character1.IsDead() && !character3.IsDead()) {
 
-        if (!character2.IsDead()) {
-            character1.ReduceHeal(character2.Atack())
+        character3.ReduceHeal(character1.Atack())
+
+        character3.ReduceHeal(character2.Atack())
+
+        if (round%2 ==0){
+            character1.ReduceHeal(character3.Atack())
+        }else{
+            character2.ReduceHeal(character3.Atack())
         }
+        round++
 
     }
 
-    if (character1.IsDead()){winner += "El personaje2 ha ganado."}
-    else{winner+="El personaje1 ha ganado."}
+    if (!character3.IsDead()){winner += "El personaje3 ha ganado."}
+    else{winner+="El personaje 1 y personaje 2 ha ganado."}
 
     println(winner)
-    println("Se queda con ${character2.vida} Hp")
+    println(character1.vida)
+    println(character2.vida)
+    println(character3.vida)
 
 
 }
