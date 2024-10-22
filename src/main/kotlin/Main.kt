@@ -28,12 +28,7 @@ fun main() {
             "5" -> {
                 LevelCharacter().ShowLevel(consola,19)
             }
-            "8" -> {
-
-            }
-            "9" -> {}
-            "10" -> {}
-            "11" -> {}
+            //Los demas estan desarrollados en la carpeta combate
             else -> {}
         }
 
